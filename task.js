@@ -12,22 +12,22 @@ const users = [
     major: "Informatics",
   },
   {
-    name: "Sulastri",
+    name: "Isfa",
     age: 20,
     major: "Psychology",
   },
   {
-    name: "Salma",
+    name: "Nurul",
     age: 19,
     major: "Information Systems",
   },
   {
-    name: "Leo",
+    name: "Salma",
     age: 23,
     major: "Informatics",
   },
   {
-    name: "Ahmad",
+    name: "Sulastri",
     age: 25,
     major: "Medical"
   }
@@ -40,8 +40,8 @@ const users = [
  * Note: Ubah function menggunakan arrow function.
  */
 const all = () => {
-  for (let i = 0; i < users.length; i++) 
-  console.log(users[i]);     
+  for (const allUser of users) 
+  console.log(allUser);     
 } 
 
 /**
@@ -51,9 +51,9 @@ const all = () => {
  * Note: Ubah function menggunakan arrow function.
  */
 
-const store = (newUser) => {
-  users.push(newUser);
-  console.log(users);
+const store = (user) => {
+  users.push(user);
+  all();
 }
 
 /**
@@ -63,9 +63,14 @@ const store = (newUser) => {
  * Note: Ubah function menggunakan arrow function.
  */
 
-const update = (editedIndex, editedUser) => {
-  users[editedIndex] = editedUser;
-  console.log(users);
+const update = (index, user) => {
+  if (users[index]) {
+    users[index] = user;
+    all();
+  }
+  else {
+    console.log(`notfound`);
+  }  
 }
 
 /**
@@ -74,9 +79,14 @@ const update = (editedIndex, editedUser) => {
  * Hint: Gunakan method splice.
  * Note: Ubah function menggunakan arrow function.
  */
-const destroy = (deletedIndex) => {
-  users.splice(deletedIndex,2);
-  console.log(users);
+const destroy = (index) => {
+  if (users[index]) {
+    users.splice(index,2);
+    all();
+  }
+  else {
+    console.log(`notfound`);
+  }  
 }
 
 /**
