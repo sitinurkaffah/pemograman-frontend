@@ -48,11 +48,13 @@
 }
 
 .form__button {
-    padding: 0.6rem 5rem;
+    padding: 0.8rem 2rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: #023e8a;
-    color: #fff;}
+    color: #fff;
+    cursor: pointer;
+}
 
 /* Medium Screen */
 @media (min-width: 768px) {
@@ -62,11 +64,6 @@
     
     .form__right {
         flex-basis: 50%
-    }
-
-    .img{
-        float: left;
-        width:50 px;
     }
 
     .form{
@@ -92,10 +89,6 @@
         flex-basis: 50%
     }
 
-    .img{
-        float: left;
-        width:30 px;
-    }
     .form{
         float:right;
         width:50%;  
