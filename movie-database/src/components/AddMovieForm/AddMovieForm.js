@@ -45,7 +45,7 @@ const { isTitleError, isDateError, isPosterError, isTypeError } = formErrors;
 function validate() {
     if (title === "") {
         setFormErrors({ ...formErrors, 
-            IsTitleError: true
+            isTitleError: true
         });
         return false;
     } else if (date === "") {
@@ -69,8 +69,8 @@ function validate() {
         setFormErrors({ ...formErrors,
             isTitleError: false,
             isDateError: false,
-            IsPosterError: false,
-            IsTypeError: false,
+            isPosterError: false,
+            isTypeError: false,
         })
         return true;
     }
