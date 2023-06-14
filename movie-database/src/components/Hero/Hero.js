@@ -18,7 +18,7 @@ function Hero() {
   //Mendapatkan 1 data dari trending movies
   async function getTrendingMovies() {
     const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
-    const response = await axios(URL)
+    const response = await axios(ENDPOINTS.HERO)
     return response.data.results[Math.floor(Math.random() * 20)];
   }
 
@@ -28,7 +28,6 @@ function Hero() {
     const id = trendingMovie.id;
 
     //fetch deatil movie by id
-    const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos`
     const response = await axios(ENDPOINTS.DETAIL(id));
 
     setMovie(response.data);
