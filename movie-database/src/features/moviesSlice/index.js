@@ -10,12 +10,14 @@ const movieSlice = createSlice({
         addmovie(state, action) {
             state.movies.push(action.payload)
         },
+        deletedMovie() {
+        }
     },
 });
 
 //gemerate action dan reducers
-const { addmovie } = movieSlice.actions;
+const { addmovie, deletedMovie } = movieSlice.actions;
 const moviesReducer = movieSlice.reducer;
 
-export { addmovie };
+export { addmovie, deletedMovie };
 export default moviesReducer;
